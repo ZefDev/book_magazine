@@ -4,18 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')</title>
-  <!--
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
-
-
-
-   Bootstrap core CSS -->
-<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
-  <link href="{{ asset('css/form-validation.css')}} " rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/modal.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/form-validation.css')}} " rel="stylesheet">
   </head>
   <body class="bg-light">
+    @include('order_form')
     <header>
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
@@ -54,8 +49,9 @@
         @yield('content')
       </div>
     </main>
-    <script src="{{URL::asset('js/jquery-3.5.1.min.js')}}"></script>
-    <script src="{{URL::asset('js/bootstrap.bundle.min.js')}}" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="{{URL::asset('js/main.js')}}"></script>
+
   </body>
+  <script src="{{URL::asset('js/jquery-3.5.1.min.js')}}"></script>
+  <script src="{{URL::asset('js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{URL::asset('js/main.js')}}"></script>
 </html>

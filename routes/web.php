@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\mailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,7 @@ use App\Http\Controllers\AuthorController;
 Route::redirect('/', 'book');
 Route::get('/book/fetch_data', [BookController::class, 'fetch_data']);
 Route::get('/author/fetch_data', [AuthorController::class, 'fetch_data']);
+Route::get('/mail', [mailController::class, 'send']);
 Route::resource('users', UsersController::class);
 Route::resource('book',BookController::class);
 Route::resource('author',AuthorController::class);

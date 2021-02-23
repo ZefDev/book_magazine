@@ -12,7 +12,7 @@
               <p class="card-text">{{$item->name}}</p>
               <p class="card-text">{{$item->name_author}}</p>
               <div class="d-flex justify-content-between align-items-center">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Оформить заявку на книгу</button>
+                <button type="button" onClick="give(this)" class="btn btn-primary send order" data-author="{{$item->name_author}}" data-book="{{$item->name}}" >Оформить заявку на книгу</button>
               </div>
             </div>
           </div>
